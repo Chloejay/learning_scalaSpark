@@ -22,7 +22,7 @@ localhost: starting org.apache.spark.deploy.worker.Worker, logging to /Users/chl
 ```
 <img src="sparkWorkers.png"> 
 
-#### Set up tasks on Cluster
+#### Set up tasks on Cluster.
 use Sbt <a href="https://github.com/sbt/sbt-assembly">assembly</a> to build the JAR. 
 
 
