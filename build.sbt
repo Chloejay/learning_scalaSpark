@@ -23,6 +23,8 @@ libraryDependencies ++= Seq(
     "org.apache.spark"  %% "spark-streaming" % sparkVersion,
     "org.apache.spark"  %% "spark-sql"       % sparkVersion,
     "org.scalatest"    %% "scalatest"        % scalaTestVersion  % "test",
-    "org.scalacheck"   %% "scalacheck"       % scalaCheckVersion % "test"
-    )
+    "org.scalacheck"   %% "scalacheck"       % scalaCheckVersion % "test",
+    "org.apache.spark" %% "spark-core" % "0.8.0-incubating" % "provided",
+    ),
+assemblyJarName in assembly := "sparkScala.jar"
 )
