@@ -23,6 +23,19 @@ localhost: starting org.apache.spark.deploy.worker.Worker, logging to /Users/chl
 <img src="sparkWorkers.png"> 
 
 #### Set up tasks on Cluster.
-use Sbt <a href="https://github.com/sbt/sbt-assembly">assembly</a> to build the JAR. 
+use Sbt <a href="https://github.com/sbt/sbt-assembly">assembly</a> to build the `Fat` JAR to run on cluster `spark-submit`, which includes all code base and dependencies. 
+```
+config 
+add plugins.sbt add dependency addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.10")
+config build.sbt for jar
+```
+#### run 
+```
+sbt package 
+sbt assembly 
+get jar file from folder target/scala-2.12 
+```
 
-
+```
+/Users/chloeji/spark-3.0.0-preview2-bin-hadoop2.7/bin/spark-submit --class spark.Main /Users/chloeji/learning_scalaSpark/target/scala-2.12/sparkScala.jar
+```

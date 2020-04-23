@@ -15,8 +15,8 @@ object Main {
     //Setup;  
     val conf = new SparkConf().setAppName("scala").setMaster("local[2]")
     val sc = new SparkContext(conf)
-    val file = "src/main/scala/spark/data.txt"
-    val outputFile = "src/main/scala/spark/output"
+    val file = "resources/data.txt"
+    val outputFile = "output"
 
     try{
     val rdd = sc.textFile(file).map(line => line.toUpperCase)
